@@ -1,0 +1,14 @@
+<div *ngIf="agentName">
+  {{ agentName }}
+</div>
+
+<div *ngIf="orderName">
+  {{ orderName }}
+</div>
+
+<button #validate (click)="rxJsEventObservable()">Click for observable</button>
+
+<h2>Search with rxjs</h2>
+<div [formGroup]="searchForm">
+  <input type="text" formControlName="name" (keyup)="readValue()" />
+</div>
